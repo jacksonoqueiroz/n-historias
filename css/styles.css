@@ -1,0 +1,535 @@
+/* -------------------------------------GERAIS------------------------------*/
+body {
+    background-color: #000;
+    overflow-x: hidden;
+}
+
+header {
+    padding: 50px;
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.69) 0%,
+        rgba(0, 0, 0, 0) 100%
+    );
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 2;
+}
+
+header img{
+    width: 150px;
+}
+.btn-custom-translucent {
+    background-color: rgb(255, 255, 255, 0.2);
+    color: #fff;
+    
+}
+.btn-custom-translucent:hover{
+    color: #fff;
+    opacity: .80;
+}
+/*-------------------------------------------HOME-----------------------------*/
+.menu_list {
+    list-style: none;
+    padding-left: 0;
+    padding-top: 7px;
+}
+.menu_list li {
+    display: inline-block;
+    margin-left: 15px;
+}
+.menu_list li a {
+    color: #fff;
+}
+#hero::after {
+    content: '';
+    width: 100%;
+    height: 350px;
+    display: block;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+    position: absolute;
+    left: 0;
+    z-index: 2;
+    top: calc(700px - 350px);
+}
+
+#hero_infos {
+    padding: 0;
+    margin-top: 225px;
+    margin-left: -70px;
+    z-index: 3;
+    position: relative;
+}
+#hero_infos img.logo{
+    margin-bottom: 50px;
+    width: 300px;
+}
+#hero_infos h3 {
+    margin-bottom: 20px;
+}
+.main-content {
+    margin-top: 700px;
+}
+.main-content h5 {
+    margin-left: -50px;
+}
+.filme_lista {
+    overflow-x: scroll;
+    list-style: none;
+    white-space: nowrap;
+    padding: 20px 0;
+    display: block;
+}
+.filme_lista::-webkit-scrollbar {
+    display: none;
+}
+.filme {
+    display: inline-block;
+    width: 250px;
+    margin-right: 10px;
+    border-radius: 3px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.filme:hover { /*----- efeito aumenta a imagem ao passar o mouse------*/
+    cursor: pointer;
+    transform: scale(1.15);    
+    z-index: 999;
+    transform: 0.5s;
+}
+.filme:first-child  { /*--- primeira imagem alinhada a esquerda e outras não -------------*/
+    margin-left: 50px;
+}
+
+/*----------------------DETALHES -----------------------------------*/
+#link-container {
+    margin-top: 10px;
+    margin-left: 50px;
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 12vw);
+    grid-gap: 15px;
+}
+.titulo {
+    color: #726c6c;
+}
+
+.conteudo {
+    margin-top: 20px;
+    margin-left: -50px;
+    margin-bottom: 100px;
+    width: 110%;
+    color: #a3a3a3;
+    text-align: justify;
+}
+.historia p {
+    color: #a3a3a3;
+    margin-left: -50px;
+    margin-bottom: 30px;
+}
+.historia h5 {
+    margin-top: 20px;
+    margin-left: -50px;
+    margin-bottom: 20px;
+}
+
+.obras {
+    display: grid;
+    margin-left: -100px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 85px;
+    list-style: none;    
+}
+.obras img {
+    width: 400px;
+    height: 230px;
+}
+.text-obra {
+    color: #a3a3a3;
+}
+.titulo-obra {
+    margin-top: 10px;
+    color: #fff;
+}
+.titulo {
+    color: #fff;
+    margin-left: -50px;
+}
+.conteudo h5 {
+    margin-left: -10px;
+    margin-bottom: -70px;
+}
+.but-ref {
+    position: absolute;
+    margin-top: -50px;
+    color: #3a3838;
+    font-size: 35px;
+    margin-left: 1200px;
+    cursor: pointer;
+}
+.but-ref:hover {
+    color: #fff;
+}
+.but-ref_hist:hover {
+    color: #fff;
+}
+.but-ref:hover + .referencia{
+    transform: scale(1);
+    transition: 0.5s;
+}
+.but-ref_hist {
+    position: absolute;
+/*    margin-top: -80px;*/
+    color: #3a3838;
+    font-size: 35px;
+    margin-left: 900px;
+    cursor: pointer;
+}
+
+.but-ref_hist:hover + .ref_hist{
+    transform: scale(1);
+    transition: 0.5s;
+}
+.referencia {
+    transform: scale(0);
+    position: absolute;
+    margin-top: -3  0px;
+    background-color: rgb(255, 255, 255, 0.2);
+    width: auto;
+    color: #fff;
+    padding: 5px 10px 5px 10px;
+    font-size: 15px;
+    border-radius: 5px;
+    margin-left: 790px;
+    font-style: italic;
+}
+
+.ref_hist {
+    transform: scale(0);
+    position: absolute;
+    margin-top: -40px;
+    background-color: rgb(255, 255, 255, 0.2);
+    width: auto;
+    color: #fff;
+    padding: 5px 10px 5px 10px;
+    font-size: 15px;
+    border-radius: 5px;
+    margin-left: 600px;
+    font-style: italic;
+}
+
+
+@media screen and (max-width: 480px){
+    
+    header img {
+        margin-top: -60px;
+        margin-left: -35px;
+        width: 100px;
+    }
+    .menu_list {
+        display: none;
+    }
+        
+    #hero_infos {
+    padding: 0;
+    margin-top: 470px;
+    margin-left: -20px;
+    z-index: 3;
+    position: relative;
+    }
+    #hero_infos h3{
+        width: 400%;
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+    .conteudo p {
+        margin-left: 50px;
+        width: 90%;
+    }
+    .but-ref {
+        margin-top: -20px;
+        margin-left: 60px;
+    }
+    .referencia {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    p {
+        width: 220%;
+        text-align: justify;
+    }
+    .main-content h5 {
+        margin-left: 5px;
+        width: 450%;
+    }
+    .conteudo h5 {
+        margin-left: 35px;
+        width: 250%;
+        margin-top: 85px;
+    }
+    .historia h5 {
+        margin-left: 0;
+        width: 350%;
+    }
+    .historia p{
+        margin-left: 0;
+        width: 135%;
+    }
+    .obras {
+        margin-left: -40px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .obras img {
+        width: 300px;
+        margin-top: 30px;
+    }
+    .obras p {
+        width: 100%;
+    }
+    .text-obra p{
+        width: 80%;
+    }
+    .titulo {
+        margin-left: 20px;
+    }
+    #link-container {
+        margin-left: 20px;
+        width: 90%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: none;
+        grid-gap: 15px;
+    }
+
+    #hero::after {
+        height: 110px;
+        top: calc(700px - 334px);
+    }
+    .filme_lista {
+        margin-left: -45px;
+    }
+
+}
+
+
+@media screen and (min-width: 491px)and (max-width: 570px){
+
+        header img {
+        margin-top: -50px;
+        margin-left: -40px;
+    }
+    #hero_infos {
+    padding: 0;
+    margin-top: 500px;
+    margin-left: -20px;
+    z-index: 3;
+    position: relative;
+    }
+    p {
+        width: 220%;
+        text-align: justify;
+    }
+    .menu_list {
+        display: none;
+    }
+    #hero::after {
+        height: 140px;
+        top: calc(700px - 343px);
+    }
+    .main-content h5 {
+        margin-left: 15px;
+    }
+    .filme_lista {
+        margin-left: -35px;
+    }
+
+}
+
+@media screen and (min-width: 576px) and (max-width: 623px){
+
+    #hero::after {
+        height: 120px;
+        top: calc(700px - 303px);
+    }
+    #hero_infos {
+        margin-top: 530px;
+        margin-left: -15px;
+    }
+    .main-content h5 {
+        margin-left: 5px;
+    }
+    p {
+        width: 210%;
+        text-align: justify;
+    }
+    header img {
+        margin-top: -40px;
+        margin-left: -30px;
+    }
+    .menu_list {
+        display: none;
+    }
+    .filme_lista {
+        margin-left: -35px;
+    }
+        
+    
+}
+@media screen and (min-width: 630px) and (max-width: 700px){
+    #hero::after {
+        height: 120px;
+        top: calc(700px - 185px);
+    }
+    #hero_infos {
+        margin-top: 550px;
+        margin-left: -55px;
+    }
+    .main-content h5 {
+        margin-left: -45px;
+    }
+    p {
+        width: 230%;
+        text-align: justify;
+    }
+    header img {
+        margin-top: -40px;
+        margin-left: -30px;
+    }
+    .menu_list {
+        display: inline-block;
+        margin-left: 55px;
+        width: 160%;
+        position: absolute;
+        margin-top: -25px;
+    }
+    .filme_lista {
+        margin-left: -35px;
+    }
+}
+@media screen and (min-width: 701px) and (max-width: 900px){
+   
+   #hero::after {
+        height: 180px;
+        top: calc(700px - 175px);
+    }
+    #hero_infos {
+        margin-top: 300px;
+        margin-left: -600px;
+    }
+    #hero_infos p {
+        margin-top: 50px;
+        width: 150%;
+        margin-left: 0;
+    }
+    .main-content h5 {
+        margin-top: -40px;
+        margin-left: 5px;
+    }
+    p {
+        width: 90%;
+        text-align: justify;
+        margin-left: 50px;
+    }
+    header img {
+        margin-top: 35px;
+        margin-left: -35px;
+        width: 60%;
+    }
+    header {
+        margin-top: -60px;
+        width: 270%;
+    }
+    .menu_list {
+        display: inline-block;
+        margin-left: 575px;
+        width: 200%;
+        position: absolute;
+        margin-top: 25px;
+    }
+    .filme_lista {
+        margin-left: -5px;
+        width: 205%;
+    }
+    .obras img {
+        width: 320px;
+        margin-left: 60px;
+        margin-right: -60px;
+    }
+    .titulo-obra {
+        margin-left: 60px;
+    }
+    .text-obra {
+        margin-left: 70px;
+    }
+    .but-ref {
+        margin-top: -10px;
+        margin-left: 70px;
+    }
+    .titulo {
+        margin-left: 10px;
+    }
+    #link-container {
+        width: 86%;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 15px;
+    }
+}
+
+    @media screen and (min-width: 900) and (max-width: 1024px){
+   
+        #hero_infos {
+            margin-left: -  10px;
+            }
+            .main-content h5 {
+                margin-left: 10px;
+            }
+            .conteudo {
+                margin-left: 10px;
+                width: 95%;
+            }
+            .obras {
+                margin-left: -20px;
+                grid-template-columns: repeat(2, 1fr);
+                grid-gap: 50px;
+            }
+            .titulo {
+                margin-left: 20px;
+            }
+            #link-container {
+                width: 87%;
+                grid-template-columns: repeat(3, 1fr);
+            }
+   
+}
+@media screen and (min-width: 1024) and (max-width: 1366px){
+    #hero_infos {
+            margin-left: -10px;
+            }
+            .main-content h5 {
+                margin-left: 10px;
+            }
+            .conteudo {
+                margin-left: 10px;
+                width: 95%;
+            }
+            .obras {
+                margin-left: -20px;
+                grid-template-columns: repeat(2, 1fr);
+                grid-gap: 50px;
+            }
+            .titulo {
+                margin-left: 20px;
+            }
+            #link-container {
+                width: 87%;
+                grid-template-columns: repeat(3, 1fr);
+            }
+}
+
+
+
+
+
+
+
