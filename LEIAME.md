@@ -5,4 +5,7 @@ Este site contem urls amigáveis
 -adm com cadastro de infograficos, conteúdo;
 -ao subir este arquivo no dia 10/07/2024 falta fazer cadastro das obras, mas
 	já está fazendo o select na pagina.
--backup do banco de dados na pasta bd; 
+-backup do banco de dados na pasta bd;
+- cadastro de obras ok;
+- falta criar tabela de infografico;
+- fazer a modal para chamar o infografico no botão infografico na página detalhes;
